@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduPortal Dashboard</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body { background-color: #f4f5f7; }
+.navbar-brand span:first-child { color: #0d6efd; }
+.navbar-brand span:last-child { color: #212529; }
+.card-header-blue { background-color: #0d6efd; color: #fff; }
+.card-header-yellow { background-color: #ffc107; color: #212529; }
+.card-header-dark { background-color: #212529; color: #fff; }
+.stat-box { background-color: #f8f9fa; border-radius: 6px; padding: 15px; text-align: center; }
+.stat-number { font-size: 1.7rem; font-weight: bold; }
+.hover-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.hover-card:hover { transform: translateY(-6px); box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15) !important; }
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4">
+  <a class="navbar-brand fw-bold" href="#">
+    <span>EDU</span><span>PORTAL</span>
+  </a>
+  <div class="collapse navbar-collapse justify-content-end">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link active fw-semibold" href="#">Dashboard</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Schedules</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Account</a>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container my-4">
+
+  <div class="card p-4 mb-4 border-0 shadow-sm">
+    <h2 class="fw-bold">Welcome back, Academic Developer!</h2>
+    <p class="text-muted">This is a simple example of a responsive dashboard built with the Bootstrap 5 grid, cards and forms.</p>
+    <div>
+      <button class="btn btn-primary me-2">View Syllabus</button>
+      <button class="btn btn-outline-secondary">Quick Start</button>
+    </div>
+  </div>
+
+  <div class="row g-4 mb-4">
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm hover-card">
+        <div class="card-header card-header-blue fw-bold">Frontend Engineering</div>
+        <div class="card-body">
+          <h5 class="card-title">Bootstrap 5 Component Mastery</h5>
+          <p class="card-text text-muted">Learn responsive utilities, grid layouts, and reusable components.</p>
+          <div class="d-flex justify-content-between">
+            <span>Progress</span>
+            <span>75%</span>
+          </div>
+          <div class="progress mb-3">
+            <div class="progress-bar bg-success" style="width: 75%"></div>
+          </div>
+          <button class="btn btn-outline-primary w-100">Resume Module</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm hover-card">
+        <div class="card-header card-header-yellow fw-bold">Upcoming Deadlines</div>
+        <div class="card-body d-flex flex-column">
+          <ul class="list-group list-group-flush mb-3">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div><strong>Grid System Layout Lab</strong><br><small class="text-muted">Due in 2 days</small></div>
+              <span class="badge bg-danger">High</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div><strong>Form Validation Hook</strong><br><small class="text-muted">Due in 5 days</small></div>
+              <span class="badge bg-secondary">Medium</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div><strong>Accessible Navbar Audit</strong><br><small class="text-muted">Due next week</small></div>
+              <span class="badge bg-info text-dark">Low</span>
+            </li>
+          </ul>
+          <button class="btn btn-dark mt-auto">View All Tasks</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm hover-card">
+        <div class="card-header card-header-dark fw-bold">Academic Overview</div>
+        <div class="card-body">
+          <div class="row g-2 mb-3">
+            <div class="col-6">
+              <div class="stat-box">
+                <div class="stat-number text-primary">4.8</div>
+                <small class="text-muted">CURRENT GPA</small>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-box">
+                <div class="stat-number text-success">12</div>
+                <small class="text-muted">PASSED</small>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-box">
+                <div class="stat-number">2</div>
+                <small class="text-muted">ACTIVE</small>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-box">
+                <div class="stat-number text-info">98%</div>
+                <small class="text-muted">ATTENDANCE</small>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-outline-dark w-100">Download Transcript</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card p-4 shadow-sm border-0">
+    <h3 class="fw-bold">Course Registration & Audit</h3>
+    <p class="text-muted">Please complete the form below to register for the course.</p>
+
+    <form>
+      <fieldset class="border rounded p-3 mb-4">
+        <legend class="w-auto px-2 text-primary fs-6 fw-bold">Personal Information</legend>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" placeholder="John Doe">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" placeholder="johndoe@university.edu">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" placeholder="Enter password">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Enrollment Date</label>
+            <input type="date" class="form-control">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="border rounded p-3 mb-4">
+        <legend class="w-auto px-2 text-primary fs-6 fw-bold">Course Preferences</legend>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Primary Development Track</label>
+            <select class="form-select">
+              <option selected>Choose a track...</option>
+              <option>Frontend</option>
+              <option>Backend</option>
+              <option>Fullstack</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label d-block">Prior Experience</label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="exp" id="expNone" checked>
+              <label class="form-check-label" for="expNone">None</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="exp" id="expSome">
+              <label class="form-check-label" for="expSome">Some</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="exp" id="expAdv">
+              <label class="form-check-label" for="expAdv">Advanced</label>
+            </div>
+          </div>
+          <div class="col-12">
+            <label class="form-label">Statement of Goals</label>
+            <textarea class="form-control" rows="3" placeholder="Briefly describe what you want to build..."></textarea>
+          </div>
+          <div class="col-12 form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="subscribeToggle" checked>
+            <label class="form-check-label" for="subscribeToggle">Subscribe to updates</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="d-flex justify-content-end gap-2">
+        <button type="reset" class="btn btn-outline-danger">Reset Form</button>
+        <button type="submit" class="btn btn-success">Submit Registration</button>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+<footer class="bg-dark text-center text-white-50 py-3 mt-4">
+  <small>&copy; 2026 EduPortal</small>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
