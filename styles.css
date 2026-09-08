@@ -8,3 +8,15 @@ body { background-color: #f4f5f7; }
 .stat-number { font-size: 1.7rem; font-weight: bold; }
 .hover-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
 .hover-card:hover { transform: translateY(-6px); box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15) !important; }
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .navbar-nav .nav-link { padding-left: 0.5rem; padding-right: 0.5rem; font-size: 0.9rem; }
+  .navbar-brand { font-size: 1rem; }
+}
+
+@media (max-width: 767.98px) {
+  .navbar-toggler { display: inline-block !important; }
+}
+@media (min-width: 768px) {
+  .navbar-toggler { display: none !important; }
+}
